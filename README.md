@@ -43,9 +43,12 @@ First setup your machine or your teammate's machine to be the self hosted runner
 
 Answer the following questions:
 
-1. What does the __runs-on__ string  
+1. What does the __runs-on__ string do?
+Specifies the runner host, in this case self-hosted, or running on my machine instead of the cloud.
 2. In `main.yml`, on which branch do the jest tests run when a push to main branch is made?
+The jest tests run on the main branch when a push to main is made. This is because the workflow is triggered by on: push for main.
 3. In `main.yml`, on which branch do the jest tests run when a pull request is submitted to the deploy branch?
+The jest tests run on the deploy branch when a pull request is submitted. This is because the workflow is triggered by on: pull_request. 
 
 Next, create a new workflow yml file that captures the following continuous integration requirement:
 

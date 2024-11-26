@@ -27,7 +27,11 @@ db.on('connected', () => {
 });
 
 // cors policy that allows requests from all origins. 
+// cors is cross-origin policy that allows requests from different origins
+// This is insecure and should be changed in production to set trusted hosts
+// should specify a cors within the parens to allow only specific origins
 // This is insecure and should be changed in production
+// to set trusted hosts
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
